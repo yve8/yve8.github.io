@@ -1,0 +1,207 @@
+:root {
+    --paper: #e9d5b9;
+    --dark-paper: #d3a87e;
+    --dark-text: #64373d;
+    --my-red: #bc3b59;
+    --light-pink: #f5cbcf;
+    --dark-pink: #C7536E;
+    --mahogany: #852c3f;
+    --dark-jade: #3E6463;
+  }
+
+/* Normalize sizing and behavior of page */
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Colors of text and background */
+
+h1, 
+h2,
+h3, 
+p {
+    color: var(--dark-text);
+}
+
+body {
+    background: var(--dark-paper);
+  }
+
+/* Typefaces for page */
+h1, 
+h2,
+h3 {
+    font-family: 'EB Garamond', serif;
+}
+
+p {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+/* Letter and sizing spacing in headings */
+
+h1 {
+    font-variant: small-caps;
+    font-size: 2.5rem;
+    letter-spacing: .25rem;
+    text-align: center;
+}
+
+h2 {
+    font-variant: small-caps;
+    letter-spacing: .1rem;
+}
+
+/* Instruction paragraph */
+
+.instructions {
+    text-align: center;
+    margin: 10px;
+}
+/* BUTTONS AND INPUT */
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls input:focus {
+    outline: 0;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: center;
+}
+
+#cardnumber {
+    /* hiding default increment buttons */
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    width: 75px;
+    height: 50px;
+    font-size: medium;
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: center;
+    color: var(--dark-text);
+    background-color: var(--paper);
+    border: 1px solid var(--dark-text);
+    border-radius: 5px 0px 0px 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+
+/* new increment buttons added in script */
+
+.numbernav {
+    height: 50px;
+    width: 25px;
+    position: relative;
+}
+
+.increment {
+    height: 26px;
+    width: 25px;
+    font-weight: bold;
+    background-color: var(--paper);
+    color: var(--dark-text);
+    border-left: none;
+    border-right: 1px solid var(--dark-text);
+}
+
+.plus {
+    border-radius: 0px 5px 0px 0px;
+    border-top: 1px solid var(--dark-text);
+    border-bottom: 1px solid var(--dark-text);
+    position: absolute;
+    top: -1px;
+}
+
+.minus {
+    border-radius: 0px 0px 5px 0px;
+    border-top: none;
+    border-bottom: 1px solid var(--dark-text);
+    position: absolute;
+    bottom: -1px;
+}
+
+/* larger button to draw cards */
+.largebtn {
+    background-color: var(--dark-jade);
+    color: var(--paper);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: medium;
+    margin: 5px;
+    height: 50px;
+}
+
+/* styling for reading */
+
+.spread {
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.cardslot {
+    width: 250px;
+    padding: 5px;
+    text-align: center;
+}
+
+.cardimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 350px;
+    border: 2px solid var(--mahogany);
+    border-radius: 10px;
+}
+
+/* details divs */
+.titleen,
+.keywords {
+    font-variant: small-caps;
+}
+
+.reversal {
+    color: var(--mahogany);
+    font-size: small;
+    text-transform: lowercase;
+}
+
+.synonyms {
+    font-size: small;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
