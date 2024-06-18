@@ -32,7 +32,7 @@ numberDown.addEventListener("click",() => {increment(cardNumber, -1)});
 // create variable to store all cards
 let deck; 
 // get json information
-const requestURL = "https://raw.githubusercontent.com/yve8/tarocchino-arlecchino/main/tarocchinoarlecchino.json"
+const requestURL = "https://raw.githubusercontent.com/yve8/yve8.github.io/main/tarocchino-arlecchino/tarocchinoarlecchino.json"
 const request = new Request(requestURL);
 
 const getJSON = async url => {
@@ -51,7 +51,7 @@ getJSON(requestURL)
 
 /* CARD READING FUNCTIONS */
 const spread = document.querySelector(".spread");
-const cardBackSrc = "./images/card-back.PNG";
+const cardBackSrc = "../images/card-back.PNG";
 const cardSlots = document.querySelectorAll(".cardslot");
 
 // function to generate a single random number from 0 to the number of cards in the deck
@@ -107,7 +107,7 @@ function flipCard(e) {
     const myCard = deck[cardNumber];
     // change the image
     const img = slot.querySelector("img");
-    img.setAttribute("src", `./images/${myCard.src}`);
+    img.setAttribute("src", `../images/${myCard.src}`);
     // reversal status and keywords
     const reversal = document.createElement("p");
     reversal.setAttribute("lang", "en");
