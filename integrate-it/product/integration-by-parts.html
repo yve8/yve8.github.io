@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Integrate It! | Integration by Parts</title>
+        <link rel="icon" href="../images/integral.svg">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <header id="pageheader">
+            <a class="logo-link" href="../index.html"><img src="../images/integral.svg" alt="Integrate It homepage"></a>
+            <div class="headertext" role="presentation">
+                <h1>Integrate It!</h1>
+                <p>A guide to choosing a technique and evaluating an integral</p>
+            </div>
+        </header>
+        <div id="container" role="presentation" class="product">
+            <div class="highlight top full-width">
+                <h2>Integration by Parts</h2>
+            </div>
+            <div class="textblock coloredtext body-small padded-width">
+                <math display="block">
+                    <mrow>
+                    <mo>&int;</mo>
+                        <mrow>
+                        <mi>u</mi>
+                        </mrow>
+                        <mrow><mi>d</mi><mi>v</mi></mrow>
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                    <mi>u</mi><mi>v</mi>
+                    </mrow>
+                    <mo>-</mo>
+                    <mrow>
+                    <mo>&int;</mo>
+                        <mrow>
+                        <mi>v</mi>
+                        </mrow>
+                        <mrow><mi>d</mi><mi>u</mi>
+                        </mrow>
+                    </mrow>
+                </math>
+            </div>
+            <div class="textblock left-half body-lower">
+                <p>To use the integration by parts formula, let <math><mi>d</mi><mi>v</mi></math> be the part of the integrand with a known antiderivative <math><mi>v</mi></math>. If both parts of the integrand have simple antiderivatives, let <math><mi>u</mi></math> be the one that becomes simpler when differentiated.</p>
+                <p>You may need to use additional integration techniques on the resulting integral.</p>
+            </div>
+            <iframe class="right-half body-lower" width="560" height="315" src="https://www.youtube.com/embed/2Wrh9fN1fLY?si=SRqmPbQx3qRwKoXQ" title="YouTube video: Integration by Parts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <details id="basicformulas">
+            <summary>
+                <strong>Basic Integration Formulas</strong>
+            </summary>
+            <h3>Exponential</h3>
+            <math>
+                <mrow>
+                    <mo>&int;</mo>
+                    <mrow>
+                        <msup>
+                            <mi>e</mi>
+                            <mi>u</mi>
+                        </msup>
+                    </mrow>
+                    <mrow><mi>d</mi><mi>u</mi></mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                    <msup>
+                        <mi>e</mi>
+                        <mi>u</mi>
+                    </msup>
+                    <mo>+</mo>
+                    <mi>C</mi>
+                </mrow>
+            </math>
+            <h3>Powers</h3>
+            <ul class="math-list">
+                <li>
+                    <math>
+                    <mrow>
+                        <mo>&int;</mo>
+                        <mrow>
+                            <msup>
+                                <mi>u</mi>
+                                <mi>n</mi>
+                            </msup>
+                        </mrow>
+                        <mrow><mi>d</mi><mi>u</mi></mrow>
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                        <mfrac>
+                            <msup>
+                                <mi>u</mi>
+                                <mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow>
+                            </msup>
+                            <mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow>
+                        </mfrac>
+                        <mo>+</mo>
+                        <mi>C</mi>
+                    </mrow>
+                    <mrow>
+                        <mtext>, for</mtext><mspace width="5px"></mspace>
+                        <mi>n</mi><mo>&ne;</mo>
+                        <mrow><mo>-</mo><mn>1</mn></mrow>
+                    </mrow>
+                </math>
+                </li>
+                <li>
+                    <math>
+                    <mrow>
+                        <mo>&int;</mo>
+                        <mrow>
+                            <msup>
+                                <mi>u</mi>
+                                <mrow><mo>-</mo><mn>1</mn></mrow>
+                            </msup>
+                        </mrow>
+                        <mrow><mi>d</mi><mi>u</mi></mrow>
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                        <mo>&int;</mo>
+                        <mrow>
+                            <mfrac>
+                                <mn>1</mn>
+                                <mi>u</mi>
+                            </mfrac>
+                        </mrow>
+                        <mrow><mi>d</mi><mi>u</mi></mrow>
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                        <mo>ln</mo>
+                        <mrow><mo>|</mo><mi>u</mi><mo>|</mo></mrow>
+                        <mo>+</mo>
+                        <mi>C</mi>
+                    </mrow>    
+                    </math>
+                </li>
+            </ul>
+            <h3>Trigonometric</h3>
+            <ul class="math-list">
+                <li>
+                    <math>
+                    <mrow>
+                        <mo>&int;</mo>
+                        <mrow>
+                            <mo>sin</mo>
+                            <mi>u</mi>
+                        </mrow>
+                        <mrow><mi>d</mi><mi>u</mi></mrow>
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                        <mo>-</mo>
+                        <mo>cos</mo>
+                        <mi>u</mi>
+                        <mo>+</mo>
+                        <mi>C</mi>
+                    </mrow>
+                    </math>
+                </li>
+                <li>
+                    <math>
+                        <mrow>
+                            <mo>&int;</mo>
+                            <mrow>
+                                <mo>cos</mo>
+                                <mi>u</mi>
+                            </mrow>
+                            <mrow><mi>d</mi><mi>u</mi></mrow>
+                        </mrow>
+                        <mo>=</mo>
+                        <mrow>
+                            <mo>sin</mo>
+                            <mi>u</mi>
+                            <mo>+</mo>
+                            <mi>C</mi>
+                        </mrow>
+                        </math>
+                </li>
+                <li>
+                    <math>
+                    <mrow>
+                        <mo>&int;</mo>
+                        <mrow>
+                            <msup>
+                                <mo>sec</mo>
+                                <mn>2</mn>
+                            </msup>
+                            <mi>u</mi>
+                        </mrow>
+                        <mrow><mi>d</mi><mi>u</mi></mrow>
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                        <mo>tan</mo>
+                        <mi>u</mi>
+                        <mo>+</mo>
+                        <mi>C</mi>
+                    </mrow>
+                    </math>
+                </li>
+                <li>
+                    <math>
+                    <mrow>
+                        <mo>&int;</mo>
+                        <mrow>
+                            <mrow><mo>sec</mo><mi>u</mi></mrow>
+                            <mrow><mo>tan</mo><mi>u</mi></mrow>
+                        </mrow>
+                        <mrow><mi>d</mi><mi>u</mi></mrow>
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                        <mo>sec</mo>
+                        <mi>u</mi>
+                        <mo>+</mo>
+                        <mi>C</mi>
+                    </mrow>
+                    </math>
+                </li>
+            </ul>
+            <h3>Inverse Trigonometric</h3>
+            <ul class="math-list">
+                <li>
+                    <math>
+                    <mrow>
+                        <mo>&int;</mo>
+                        <mfrac>
+                            <mn>1</mn>
+                            <mrow>
+                                <mn>1</mn>
+                                <mo>+</mo>
+                                <msup>
+                                    <mi>u</mi>
+                                    <mn>2</mn>
+                                </msup>
+                            </mrow>
+                        </mfrac>
+                        <mrow><mi>d</mi><mi>u</mi></mrow>
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                        <mo>arctan</mo>
+                        <mi>u</mi>
+                        <mo>+</mo>
+                        <mi>C</mi>
+                    </mrow>
+                    </math>
+                </li>
+                <li>
+                    <math>
+                    <mrow>
+                        <mo>&int;</mo>
+                        <mfrac>
+                            <mn>1</mn>
+                            <msqrt>
+                                <mn>1</mn>
+                                <mo>-</mo>
+                                <msup>
+                                    <mi>u</mi>
+                                    <mn>2</mn>
+                                </msup>
+                            </msqrt>
+                        </mfrac>
+                        <mrow><mi>d</mi><mi>u</mi></mrow>
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                        <mo>arcsin</mo>
+                        <mi>u</mi>
+                        <mo>+</mo>
+                        <mi>C</mi>
+                    </mrow>
+                    </math>
+                </li>
+            </ul>
+        </details>
+        <details id="references">
+            <summary>
+                <strong>References</strong>
+            </summary>
+            <p>Here is a list of the outside resources linked within this guide.</p>
+            <h3>Calculators</h3>
+            <ul class="works-cited">
+                <li><cite><a href="https://www.wolframalpha.com/calculators/integral-calculator/">Integral Calculator</a></cite> by Wolfram Alpha</li>
+                <li><cite><a href="https://learn.desmos.com/integrals">Learn Desmos: Integrals</a></cite> on Desmos Help Center</li>
+            </ul>
+            <h3>Explanations of Methods</h3>
+            <ul class="works-cited">
+                <li><cite><a href="https://tutorial.math.lamar.edu/Classes/CalcII/ApproximatingDefIntegrals.aspx">Approximating Definite Integrals</a></cite> by Paul's Online Notes (Paul Dawkins)</li>
+                <li><cite><a href="https://tutorial.math.lamar.edu/Classes/Alg/DividingPolynomials.aspx">Dividing Polynomials</a></cite> by Paul's Online Notes (Paul Dawkins)</li>
+                <li><cite><a href="https://math24.net/integration-completing-square.html">Integration by Completing the Square</a></cite> by Alex Svirin, PhD (math24.net)</li>
+                <li><cite><a href="https://math.libretexts.org/Bookshelves/Calculus/Book%3A_Calculus_(Apex)/05%3A_Integration/5.03%3A_Riemann_Sums">Riemann Sums</a></cite> by George Hartman et al. (Mathematics LibreTexts)</li>
+                <li><cite><a href="https://artofproblemsolving.com/wiki/index.php/Trigonometric_identities">Trigonometric Identites</a></cite> by Art of Problem Solving</li>
+            </ul>
+        </details>
+        <footer> <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Integrate It</span> by <span property="cc:attributionName">Yve Lepkowski</span> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p> </footer>
+    </body>
+</html>
